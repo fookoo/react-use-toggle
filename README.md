@@ -7,7 +7,7 @@ It comes with toggle method as well as direct on / off and open / close
 ## Getting started
 
 ```
-yarn add react-use-toggle
+yarn add react-use-toggle-hook
 ```
 
 ## Usage
