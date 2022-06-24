@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react'
-import { useWhenMounted } from 'react-use-when-mounted'
 
 interface UseToggleResponse {
   value: boolean
@@ -11,11 +10,10 @@ interface UseToggleResponse {
 }
 
 export const useToggle = (initialValue = false): UseToggleResponse => {
-  const whenMounted = useWhenMounted()
   const [value, setValue] = useState(initialValue)
-  const open = useCallback(() => whenMounted(() => setValue(true)), [setValue, whenMounted])
-  const close = useCallback(() => whenMounted(() => setValue(false)), [setValue, whenMounted])
-  const toggle = useCallback(() => whenMounted(() => setValue((p) => !p)), [setValue, whenMounted])
+  const open = useCallback(() => setValue(true), [])
+  const close = useCallback(() => setValue(false), [])
+  const toggle = useCallback(() => setValue((p) => !p), [])
 
   return {
     value,

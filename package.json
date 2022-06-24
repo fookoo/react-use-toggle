@@ -1,6 +1,6 @@
 {
   "name": "react-use-toggle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook for boolean state",
   "keywords": [
     "react",
@@ -22,9 +22,8 @@
     "lint": "eslint src/**/*.ts{,x} --fix"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-use-when-mounted": "^1.0.1",
-    "typescript": "^4.3.5"
+    "react": "^18.0.0",
+    "typescript": "^4.6.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.12.0",
