@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 
 interface UseToggleResponse {
   value: boolean
@@ -15,12 +15,17 @@ export const useToggle = (initialValue = false): UseToggleResponse => {
   const close = useCallback(() => setValue(false), [])
   const toggle = useCallback(() => setValue((p) => !p), [])
 
-  return {
-    value,
-    toggle,
-    open,
-    close,
-    on: open,
-    off: close,
-  }
+  const hook = useMemo(
+    () => ({
+      value,
+      toggle,
+      open,
+      close,
+      on: open,
+      off: close,
+    }),
+    [value, toggle, open, close]
+  )
+
+  return hook
 }

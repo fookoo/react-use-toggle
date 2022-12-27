@@ -37,6 +37,6 @@
 
     "react/display-name": "off",
     "react/prop-types": "off",
-    "react/require-default-props": "off",
+    "react/require-default-props": "off"
   }
 }
