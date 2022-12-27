@@ -7,7 +7,7 @@ It comes with toggle method as well as direct on / off and open / close
 ## Getting started
 
 ```
-yarn add react-use-toggle
+yarn add react-use-toggle-hook
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ interface UseToggleResponse {
 
 ```jsx
 import React, { useState, useEffect } from 'react'
-import { useToggle } from 'react-use-toggle'
+import { useToggle } from 'react-use-toggle-hook'
 
 export const CollapsableSection: React.FC = () => {
     const { value, toggle, close } = useToggle();
@@ -45,7 +45,7 @@ export const CollapsableSection: React.FC = () => {
 
 ```jsx
 import React, { useState, useEffect } from 'react'
-import { useToggle } from 'react-use-toggle'
+import { useToggle } from 'react-use-toggle-hook'
 
 export const CollapsableSection: React.FC = () => {
     const { value: isDisabled, toggle: toggleDisabled, close: disable } = useToggle();
