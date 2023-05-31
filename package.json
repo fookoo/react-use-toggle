@@ -1,6 +1,6 @@
 {
   "name": "react-use-toggle-hook",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "description": "React hook for boolean state",
   "keywords": [
@@ -10,7 +10,7 @@
     "boolean"
   ],
   "author": "Piotr Pliszczynski <fookoo@gmail.com>",
-  "repository": "https://github.com/fookoo/react-use-toggle",
+  "repository": "https://github.com/fookoo/react-use-toggle-hook",
   "main": "cjs/index.js",
   "types": "cjs/index.d.ts",
   "module": "esm/index.js",

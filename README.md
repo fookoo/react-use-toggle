@@ -20,6 +20,7 @@ interface UseToggleResponse {
   off: () => void
   open: () => void
   close: () => void
+  doAndClose: (callback: () => void | Promise<void>) => void
 }
 ```
 
@@ -54,5 +55,24 @@ export const CollapsableSection: React.FC = () => {
     return (<section>
       <input disabled={isDisabled} readOnly={isReadonly} />
     </section>)
+}
+```
+
+## Do And Close
+
+This method will call passed callback either its simple function or async function and after its done will set toggle value to false
+
+```jsx
+import React, { useState, useEffect } from 'react'
+import { useToggle } from 'react-use-toggle-hook'
+
+export const Modal: React.FC = ({ onClose }) => {
+    const { value, doAndClose } = useToggle(false);
+    
+    const save = useCallback(() => fetch('/my-api/save'), [])
+    
+    return (<div>
+      <button onClick={doAndClose(save)}>Save</button>
+    </div>)
 }
 ```
